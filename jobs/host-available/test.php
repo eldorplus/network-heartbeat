@@ -2,19 +2,31 @@
 
 namespace Network_Heartbeat\Jobs\Host_Available;
 
-class Test 
+class Test extends \Network_HeartBeat\Jobs\TestAbstract 
 {
 
-	public function execute()
+	protected $_ping_count;
+
+	public function __construct()
+	{
+		$this->setWithConfig();
+	}
+
+	public function execute($host)
 	{
 		$s = 'time=';
-		exec("ping  -c 3 $ip", $o, $status);
+		exec("ping  -c {$this->_ping_count} {$host}", $r, $status);
 
 		$ms = array();
-		foreach ($o as $l){
+		foreach ($r as $l){
 			 if(strpos($l,$s) !== FALSE)
              $ms[] = (int) substr($l,strrpos($l, $s)+strlen($s)) . "\r\n";
 		}
 
+	}
+
+	public function setWithConfig()
+	{
+		
 	}
 }
