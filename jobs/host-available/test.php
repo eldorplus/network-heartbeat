@@ -27,6 +27,6 @@ class Test extends \Network_HeartBeat\Jobs\TestAbstract
 
 	public function setWithConfig()
 	{
-		
+		$this->_ping_count = $this->getConfig()->ping_count;
 	}
 }
