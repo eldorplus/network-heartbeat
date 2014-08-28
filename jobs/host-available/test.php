@@ -2,7 +2,7 @@
 
 namespace Network_Heartbeat\Jobs\Host_Available;
 
-class Test extends \Network_HeartBeat\Jobs\TestAbstract 
+class Test extends \Network_HeartBeat\Jobs\Base 
 {
 
 	protected $_ping_count;
