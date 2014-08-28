@@ -19,8 +19,9 @@ class Test extends \Network_HeartBeat\Jobs\Base
 
 		$ms = array();
 		foreach ($r as $l){
-			if(strpos($l,$s) !== FALSE)
+			if(strpos($l,$s) !== FALSE){
 				$ms[] = (int) substr($l,strrpos($l, $s)+strlen($s));
+			}
 		}
 
 	}
