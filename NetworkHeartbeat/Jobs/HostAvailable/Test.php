@@ -1,8 +1,8 @@
 <?php 
 
-namespace Network_Heartbeat\Jobs\Host_Available;
+namespace NetworkHeartbeat\Jobs\HostAvailable;
 
-class Test extends \Network_HeartBeat\Jobs\Base 
+class Test extends \NetworkHeartBeat\Jobs\Base 
 {
 
 	protected $_ping_count;
