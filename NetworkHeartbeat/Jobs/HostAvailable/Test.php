@@ -14,13 +14,13 @@ class Test extends \NetworkHeartBeat\Jobs\Base
 
 	public function execute($host)
 	{
-		$s = 'time=';
-		exec("ping  -c {$this->_ping_count} {$host}", $r, $status);
+		$token = 'time=';
+		exec("ping  -c {$this->_ping_count} {$host}", $result);
 
 		$ms = array();
-		foreach ($r as $l){
-			if(strpos($l,$s) !== FALSE){
-				$ms[] = (int) substr($l,strrpos($l, $s)+strlen($s));
+		foreach ($result as $line){
+			if(strpos($line,$token) !== FALSE){
+				$ms[] = (int) substr($line,strrpos($line, $token)+strlen($token));
 			}
 		}
 
