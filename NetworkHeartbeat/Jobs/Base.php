@@ -1,6 +1,6 @@
 <?php
 
-namespace Network_Heartbeat\Jobs;
+namespace NetworkHeartbeat\Jobs;
 
 abstract class Base 
 {
