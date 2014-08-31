@@ -2,11 +2,11 @@
 return array (
 	'administrator_email' => 'dustinmoorman@gmail.com',
 	'hosts' => array(),
-	'high_ping_threshold_ms' => '300',
  	'mandrill_creds' => array(),
 	'jobs' => array(
 		'hostAvailable' => array(
 			'ping_count' = 3,
+			'high_ping_threshold_ms' => 300,
 			'acceptable_packet_loss_percent' => 1,
 		),
 		'networkAvailable' => array(
