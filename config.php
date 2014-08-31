@@ -5,7 +5,7 @@ return array (
  	'mandrill_creds' => array(),
 	'jobs' => array(
 		'hostAvailable' => array(
-			'ping_count' = 3,
+			'ping_count' => 3,
 			'high_ping_threshold_ms' => 300,
 			'acceptable_packet_loss_percent' => 1,
 			'hosts' => array(),
