@@ -11,9 +11,6 @@ $Job = factory($argv[1]);
 
 print_r($Job);
 
-
-// runner should instantiate job
-
 // runner should set job configs
 
 // runner should execute job
