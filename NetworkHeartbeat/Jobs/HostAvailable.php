@@ -1,6 +1,6 @@
 <?php 
 
-namespace NetworkHeartbeat\Jobs\HostAvailable;
+namespace NetworkHeartbeat\Jobs;
 
 class HostAvailable extends \NetworkHeartBeat\Jobs\Base 
 {
