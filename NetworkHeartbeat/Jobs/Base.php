@@ -13,7 +13,7 @@ abstract class Base
 		return $this->_config;
 	}
 
-	public function setConfig(array $config){
+	public function setConfig(\stdClass $config){
 		$this->_config = $config;
 	}
 }
