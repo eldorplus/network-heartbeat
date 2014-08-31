@@ -24,10 +24,10 @@ if(isset($Config->jobs->$argv[1])){
 }
 
 print_r($Job);
+
+$Job->execute();
+
 exit;
-
-// runner should execute job
-
 // runner should supply communication to mailer of errors
 
 function factory($job_name){
