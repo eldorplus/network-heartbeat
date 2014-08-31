@@ -6,5 +6,9 @@ return array (
 	'acceptable_packet_loss_percent' => '1',
  	'mandrill_creds' => array(),
 	'network_unavailable_wait_time_seconds' => 5,
-	'ping_count' = 3,
+	'jobs' => array(
+		'host-available' => array(
+			'ping_count' = 3,
+		),
+	),
 );
