@@ -5,10 +5,12 @@ return array (
 	'high_ping_threshold_ms' => '300',
 	'acceptable_packet_loss_percent' => '1',
  	'mandrill_creds' => array(),
-	'network_unavailable_wait_time_seconds' => 5,
 	'jobs' => array(
 		'host-available' => array(
 			'ping_count' = 3,
+		),
+		'networkAvailable' => array(
+			'wait_time_seconds' => 5,
 		),
 	),
 );
