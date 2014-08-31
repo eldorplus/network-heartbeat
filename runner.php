@@ -9,9 +9,22 @@ spl_autoload_register(function($class){
 
 $Job = factory($argv[1]);
 
-print_r($Job);
+if(!$Job instanceof \NetworkHeartbeat\Jobs\Base){
+    echo $Job;
+    exit;
+}
 
-// runner should set job configs
+$config_data = include 'config.php';
+$Config = new stdClass();
+
+recursivelyHydrate($Config, $config_data);
+
+if(isset($Config->jobs->$argv[1])){
+    $Job->setConfig($Config->jobs->$argv[1]);
+}
+
+print_r($Job);
+exit;
 
 // runner should execute job
 
@@ -26,5 +39,16 @@ function factory($job_name){
         throw new Exception('Job does not exist.');
     } catch (Exception $e){
         return $e->getMessage();
+    }
+}
+
+function recursivelyHydrate($object, $array){
+    foreach($array as $k => $v){
+        if(is_array($v)){
+            $object->$k = new stdClass();
+            recursivelyHydrate($object->$k, $v);
+        } else {
+            $object->$k = $v;
+        }
     }
 }
