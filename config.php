@@ -6,7 +6,7 @@ return array (
  		'apiKey' => 'b'
 	),
 	'jobs' => array(
-		'hostAvailable' => array(
+		'HostAvailable' => array(
 			'ping_count' => 3,
 			'high_ping_threshold_ms' => 300,
 			'acceptable_packet_loss_percent' => 1,
