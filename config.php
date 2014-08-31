@@ -6,7 +6,7 @@ return array (
 	'acceptable_packet_loss_percent' => '1',
  	'mandrill_creds' => array(),
 	'jobs' => array(
-		'host-available' => array(
+		'hostAvailable' => array(
 			'ping_count' = 3,
 		),
 		'networkAvailable' => array(
