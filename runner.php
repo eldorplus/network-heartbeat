@@ -23,8 +23,6 @@ if(isset($Config->jobs->$argv[1])){
     $Job->setConfig($Config->jobs->$argv[1]);
 }
 
-print_r($Job);
-
 $Job->execute();
 
 exit;
