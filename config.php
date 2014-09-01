@@ -46,7 +46,7 @@ return array (
 			'high_ping_threshold_ms' => 300,
 			'acceptable_packet_loss_percent' => 1,
 			'hosts' => array(
-				'test' => '192.168.1.1'
+				'test' => 'www.tau.pe'
 			),
 		),
 		'networkAvailable' => array(
