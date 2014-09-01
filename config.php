@@ -3,7 +3,10 @@
 $mandrill_api_key = include 'mandrill.key.php';
 
 return array (
-	'administrator_email' => 'dustin.moorman@gmail.com',
+	'administrator' => array(
+		'email' => 'dustin.moorman@gmail.com',
+		'name' => 'Dustin Moorman'
+	),
 	'hosts' => array(),
 	'mailer' => array(
 		'on' => true,
