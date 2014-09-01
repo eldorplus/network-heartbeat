@@ -1,6 +1,6 @@
 <?php
 
-namespace \NetworkHeartbeat\Mailer\Vendors\Mandrill\Implementation;
+namespace NetworkHeartbeat\Mailer\Vendors\Mandrill\Implementation;
 
 class Dustinmoorman implements \NetworkHeartbeat\Mailer\AdapterInterface
 {
