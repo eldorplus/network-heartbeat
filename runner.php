@@ -19,8 +19,8 @@ $Config = new stdClass();
 
 recursivelyHydrate($Config, $config_data);
 
-if(isset($Config->jobs->$argv[1])){
-    $Job->setConfig($Config->jobs->$argv[1]);
+if(isset($Config->job->$argv[1])){
+    $Job->setConfig($Config->job->$argv[1]);
 }
 
 if($Config->mailer->on){

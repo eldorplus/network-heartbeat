@@ -21,6 +21,11 @@ return array (
 		'vendor' => array(
 			'name' => 'Mandrill',
 			'implementation' => 'Dustinmoorman',
+			/**
+			* The 'from' information is for the automated 
+			* system that will be sending you notification 
+			* emails.
+			*/
 			'from' => array(
 				'name' => 'Network Heartbeat',
 				'address' => 'neth@dustinmoorman.com',
@@ -35,7 +40,7 @@ return array (
 	* made here will be available in each job
 	* respectively.
 	*/
-	'jobs' => array(
+	'job' => array(
 		'HostAvailable' => array(
 			'ping_count' => 3,
 			'high_ping_threshold_ms' => 300,
