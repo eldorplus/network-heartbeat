@@ -18,6 +18,6 @@ class Strategy
 
     public static function Mandrill(\stdClass $Config)
     {
-        return new Vendors\Mandrill\Adapter($Config);
+        return Vendors\Mandrill\Adapter::factory($Config);
     }
 }

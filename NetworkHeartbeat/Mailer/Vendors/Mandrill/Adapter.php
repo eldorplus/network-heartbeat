@@ -4,7 +4,7 @@ namespace NetworkHeartbeat\Mailer\Vendors\Mandrill;
 
 class Adapter
 {
-    public function __construct(\stdClass $Config){
+    public static function factory(\stdClass $Config){
         switch($Config->mailer->vendor->implementation){
             default:
             case 'Dustinmoorman':
