@@ -1,7 +1,7 @@
 <?php
 
 define('APPLICATION_PATH', dirname(__FILE__));
-define('JOB_DIRECTORY', APPLICATION_PATH . '/NetworkHeartbeat/Jobs/');
+define('JOB_DIRECTORY', APPLICATION_PATH . '/NetworkHeartbeat/Job/');
 
 spl_autoload_register(function($class){
     require_once(str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php');
@@ -9,7 +9,7 @@ spl_autoload_register(function($class){
 
 $Job = factory($argv[1]);
 
-if(!$Job instanceof \NetworkHeartbeat\Jobs\Base){
+if(!$Job instanceof \NetworkHeartbeat\Job\Base){
     echo $Job;
     exit;
 }
@@ -30,7 +30,11 @@ if($Config->mailer->on){
 
 //$Job->execute();
 
-print_r($Mailer);
+$Mailer->setBody('<h1>Network Heartbeat Test Victory!!!!</h1>');
+$Mailer->addRecipient($Config->administrator->email, $Config->administrator->name);
+$result = $Mailer->send();
+
+print_r($result);
 
 exit;
 // runner should supply communication to mailer of errors
@@ -38,7 +42,7 @@ exit;
 function factory($job_name){
     try {
         if(file_exists(JOB_DIRECTORY . $job_name . '.php')){
-            $job = 'NetworkHeartbeat\Jobs\\' . $job_name;
+            $job = 'NetworkHeartbeat\Job\\' . $job_name;
             return new $job;
         }        
         throw new Exception('Job does not exist.');
