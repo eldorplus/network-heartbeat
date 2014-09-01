@@ -1,6 +1,6 @@
 <?php 
 
-namespace \NetworkHeartbeat\Mailer;
+namespace NetworkHeartbeat\Mailer;
 
 interface AdapterInterface
 {
