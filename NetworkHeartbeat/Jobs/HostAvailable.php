@@ -4,14 +4,6 @@ namespace NetworkHeartbeat\Jobs;
 
 class HostAvailable extends \NetworkHeartBeat\Jobs\Base 
 {
-
-	protected $_ping_count;
-
-	public function __construct()
-	{
-		$this->setWithConfig();
-	}
-
 	public function execute($host)
 	{
 		$token = 'time=';
@@ -24,10 +16,5 @@ class HostAvailable extends \NetworkHeartBeat\Jobs\Base
 			}
 		}
 
-	}
-
-	public function setWithConfig()
-	{
-		$this->_ping_count = $this->getConfig()->ping_count;
 	}
 }
