@@ -1,10 +1,10 @@
 <?php
 
-namespace \NetworkHeartbeat\Mailer;
+namespace NetworkHeartbeat\Mailer;
 
 class Strategy
 {
-    public static function getMailer(stdClass $Config)
+    public static function getMailer(\stdClass $Config)
     {
         switch ($Config->mailer->vendor->name){
             case 'Mandrill':
@@ -16,7 +16,7 @@ class Strategy
         return $mailer;
     }
 
-    public static function Mandrill(stdClass $Config)
+    public static function Mandrill(\stdClass $Config)
     {
         return new Vendors\Mandrill\Adapter($Config);
     }
