@@ -1,6 +1,6 @@
 <?php
 
-namespace \NetworkHeartbeat\Mailer\Vendor\Mandrill;
+namespace NetworkHeartbeat\Mailer\Vendors\Mandrill;
 
 class Adapter
 {
