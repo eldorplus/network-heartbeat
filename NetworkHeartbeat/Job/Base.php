@@ -6,8 +6,6 @@ abstract class Base
 {
 	private $_config;
 
-	abstract function setWithConfig();
-
 	protected function getConfig()
 	{
 		return $this->_config;
