@@ -23,7 +23,14 @@ if(isset($Config->jobs->$argv[1])){
     $Job->setConfig($Config->jobs->$argv[1]);
 }
 
-$Job->execute();
+if($Config->mailer->on){
+    $Mailer = \NetworkHeartbeat\Mailer\Strategy::getMailer($Config);
+
+}
+
+//$Job->execute();
+
+print_r($Mailer);
 
 exit;
 // runner should supply communication to mailer of errors
