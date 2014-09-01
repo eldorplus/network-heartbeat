@@ -6,5 +6,5 @@ interface AdapterInterface
 {
     public function send();
     public function addRecipient($email, $name = null);
-    public function setBody();
+    public function setBody($body);
 }
