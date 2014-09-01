@@ -2,3 +2,4 @@ mandrill.key.php
 composer.lock
 composer.phar
 vendor/
+.DS_Store
