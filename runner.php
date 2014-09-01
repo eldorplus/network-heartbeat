@@ -28,11 +28,11 @@ if($Config->mailer->on){
 
 }
 
-//$Job->execute();
+$result = $Job->execute();
 
-$Mailer->setBody('<h1>Network Heartbeat Test Victory!!!!</h1>');
-$Mailer->addRecipient($Config->administrator->email, $Config->administrator->name);
-$result = $Mailer->send();
+// $Mailer->setBody('<h1>Network Heartbeat Test Victory!!!!</h1>');
+// $Mailer->addRecipient($Config->administrator->email, $Config->administrator->name);
+// $result = $Mailer->send();
 
 print_r($result);
 
