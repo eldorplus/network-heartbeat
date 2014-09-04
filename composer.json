@@ -7,6 +7,7 @@
     "homepage": "http://dustinmoorman.com/",
     "require": {
         "php": ">=5.3.3",
-        "dustinmoorman/mandrill": "dev-master"
+        "dustinmoorman/mandrill": "dev-master",
+	"react/react":"0.3.*"
     }
 }
