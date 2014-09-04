@@ -36,8 +36,6 @@ $result = $Job->execute();
 
 print_r($result);
 
-exit;
-// runner should supply communication to mailer of errors
 
 function factory($job_name){
     try {
