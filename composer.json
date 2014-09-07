@@ -8,6 +8,7 @@
     "require": {
         "php": ">=5.3.3",
         "dustinmoorman/mandrill": "dev-master",
-	"react/zmq":"0.2.*|0.3.*"
+		"react/zmq":"0.2.*|0.3.*",
+		"ext-zmq":"*"
     }
 }
