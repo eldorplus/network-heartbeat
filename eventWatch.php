@@ -15,7 +15,7 @@ $listen->bind('tcp://127.0.0.1:5555');
 echo "Bound to socket, port 5555.";
 
 $listen->on('message', function ($msg) {
-	echo "\r\nRec: " . print_r($msg,1);
+	echo "\r\nRec: " . print_r(unserialize($msg),1);
 });
 
 $listen->on('error', function ($e) {
