@@ -21,4 +21,11 @@ abstract class Base
 	public function setConfig(\stdClass $config){
 		$this->_config = $config;
 	}
+
+	public function triggerEvent($triggeredEvent)
+	{
+		$event = \NetworkHeartbeat\Event($triggeredEvent);
+		$this->Emitter->transmit($event->getPayload);
+	}
+
 }
