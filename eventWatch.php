@@ -6,7 +6,7 @@ echo ":: EventWatch - Network Heartbeat";
 
 $server = React\EventLoop\Factory::create();
 $context = new React\ZMQ\Context($server);
-$mailer = \NetworkHeartbeat\Mailer\Strategy::getMailer($Config);
+$mailer = NetworkHeartbeat\Mailer\Strategy::getMailer($Config);
 
 echo "\r\nServer created...";
 
