@@ -4,16 +4,26 @@ namespace NetworkHeartbeat\Event;
 
 class Event 
 {
-	protected $payload;
+	const JOB_EXCEPTION = 'A Job Exception Has Occured';
+	const HOST_HIGH_PING = 'Host Registering High Ping';
+	const HOST_UNAVAILABLE = 'Unable to Reach Host';
+	const PACKET_LOSS_THRESHOLD = 'Host Registering High Packet Loss';
 
-	public function __construct($eventType, $message = '')
+	protected $_payload;
+	protected $_jobConfig;
+
+	public function __construct($eventType, $meta)
 	{
-		$this->payload = new stdClass();
-		
+		$this->_payload = new stdClass();
+		$this->_payload->event = $eventType;
+		$message = strlen($meta) > 0 
+			? $meta
+			: $eventType;
+		$this->_payload->message = $message; 
 	}
 
 	public function getPayload()
 	{
-		return $this->payload;
+		return $this->_payload;
 	}
 }
