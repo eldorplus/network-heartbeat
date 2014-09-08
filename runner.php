@@ -2,6 +2,10 @@
 
 require_once 'vendor/autoload.php';
 
+$config_data = include 'config.php';
+$Config = new Config();
+$Config->setWithArray($config_data);
+
 $Job = factory($argv[1]);
 
 if(!$Job instanceof \NetworkHeartbeat\Job\Base){
