@@ -19,3 +19,15 @@ if($Config->mailer->on){
 }
 
 $result = $Job->execute();
+
+function factory($job_name){
+    try {
+        if(file_exists(JOB_DIRECTORY . $job_name . '.php')){
+            $job = 'NetworkHeartbeat\Job\\'. $job_name;
+            return new $job;
+        }    
+        throw new Exception('Job does not exist.');
+    } catch (Exception $e){
+        return $e->getMessage();
+    }   
+}
