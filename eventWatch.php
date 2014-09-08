@@ -2,6 +2,10 @@
 
 require 'vendor/autoload.php';
 
+$config_data = include 'config.php';
+$Config = new Config();
+$Config->setWithArray($config_data);
+
 echo ":: EventWatch - Network Heartbeat";
 
 $server = React\EventLoop\Factory::create();
