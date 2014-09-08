@@ -15,7 +15,6 @@ class HostAvailable extends \NetworkHeartbeat\Job\Base
 					
 					$ms = array();
 					foreach ($result as $line){
-						echo "\r\nLine: $line";
 						if(strpos($line,$token) !== false){
 							$ms[] = (int) substr($line,strrpos($line, $token) + strlen($token));
 						}
