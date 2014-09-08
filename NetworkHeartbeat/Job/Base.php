@@ -5,7 +5,6 @@ namespace NetworkHeartbeat\Job;
 abstract class Base 
 {
 	private $_config;
-
 	private $Emitter;
 
 	public function __construct()
@@ -22,9 +21,9 @@ abstract class Base
 		$this->_config = $config;
 	}
 
-	public function triggerEvent($triggeredEvent)
+	public function triggerEvent($triggeredEvent, $meta)
 	{
-		$event = \NetworkHeartbeat\Event($triggeredEvent);
+		$event = \NetworkHeartbeat\Event\Event($triggeredEvent, $meta);
 		$this->Emitter->transmit($event->getPayload);
 	}
 
