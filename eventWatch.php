@@ -10,7 +10,6 @@ $mailer = NetworkHeartbeat\Mailer\Strategy::getMailer($Config);
 
 echo "\r\nServer created...";
 
-
 $listen = $context->getSocket(ZMQ::SOCKET_PULL);
 $listen->bind('tcp://127.0.0.1:5555');
 
