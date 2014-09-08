@@ -19,6 +19,3 @@ if($Config->mailer->on){
 }
 
 $result = $Job->execute();
-
-print_r($result);
-
