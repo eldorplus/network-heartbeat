@@ -10,5 +10,14 @@
         "dustinmoorman/mandrill": "dev-master",
 		"react/zmq":"0.2.*|0.3.*",
 		"ext-zmq":"*"
-    }
+    },
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"NetworkHeartbeat\\": "NetworkHeartbeat/",
+			"NetworkHeartbeat\\Jobs\\": "NetworkHeartbeat/Jobs/",
+			"NetworkHeartbeat\\Event\\": "NetworkHeartbeat/Event/",
+			"NetworkHeartbeat\\Mailer\\": "NetworkHeartbeat/Mailer/"
+		}
+	}
 }
