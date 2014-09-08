@@ -10,18 +10,6 @@ $Config = new stdClass();
 
 recursivelyHydrate($Config, $config_data);
 
-function factory($job_name){
-    try {
-        if(file_exists(JOB_DIRECTORY . $job_name . '.php')){
-            $job = 'NetworkHeartbeat\Job\\'. $job_name;
-            return new $job;
-        }    
-        throw new Exception('Job does not exist.');
-    } catch (Exception $e){
-        return $e->getMessage();
-    }   
-}
-
 function recursivelyHydrate($object, $array){
     foreach($array as $k => $v){
         if(is_array($v)){
