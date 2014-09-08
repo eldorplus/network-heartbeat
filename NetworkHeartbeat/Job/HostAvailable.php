@@ -25,16 +25,16 @@ class HostAvailable extends \NetworkHeartbeat\Job\Base
 					}
 					
 					if($loss == 100) {
-						$this->triggerEvent(\NetworkHeartbeat\Event::HOST_UNAVAILABLE, $host);
+						$this->triggerEvent(\NetworkHeartbeat\Event\Event::HOST_UNAVAILABLE, $host);
 					} else {
 
 						if ($loss > $this->getConfig()->acceptable_packet_loss_percent) {
-							$this->triggerEvent(\NetworkHeartbeat\Event::PACKET_LOSS_THRESHOLD, $host);
+							$this->triggerEvent(\NetworkHeartbeat\Event\Event::PACKET_LOSS_THRESHOLD, $host);
 						}
 					
 						foreach($ms as $msec){
 							if($msec > $this->getConfig()->high_ping_threshold_ms){
-								$this->triggerEvent(\NetworkHeartbeat\Event::HOST_HIGH_PING, $host);
+								$this->triggerEvent(\NetworkHeartbeat\Event\Event::HOST_HIGH_PING, $host);
 							}
 						}
 					}

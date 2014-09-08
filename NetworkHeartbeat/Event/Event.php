@@ -14,7 +14,7 @@ class Event
 
 	public function __construct($eventType, $meta)
 	{
-		$this->_payload = new stdClass();
+		$this->_payload = new \stdClass();
 		$this->_payload->event = $eventType;
 		$message = strlen($meta) > 0 
 			? $meta

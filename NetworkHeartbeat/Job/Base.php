@@ -23,7 +23,7 @@ abstract class Base
 
 	public function triggerEvent($triggeredEvent, $meta = '')
 	{
-		$event = \NetworkHeartbeat\Event\Event($triggeredEvent, $meta);
+		$event = new \NetworkHeartbeat\Event\Event($triggeredEvent, $meta);
 		$this->_Emitter->transmit($event->getPayload());
 	}
 
