@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 
 namespace NetworkHeartbeat\Event;
 
