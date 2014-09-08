@@ -27,7 +27,7 @@ class HostAvailable extends \NetworkHeartBeat\Job\Base
 
 					foreach($ms as $msec){
 						if($msec > $this->getConfig()->high_ping_threshold_ms){
-							$this->triggerEvent(\NetworkHeartbeat\Event::HIGH_PING);
+							$this->triggerEvent(\NetworkHeartbeat\Event::HOST_HIGH_PING, $host);
 						}
 					}
 				}	
