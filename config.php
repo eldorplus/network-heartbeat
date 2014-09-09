@@ -1,5 +1,4 @@
 <?php
-
 /**
 * Create a new file in the application root, and have it 
 * return your mandrill API key. It will be excluded from
