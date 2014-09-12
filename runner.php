@@ -6,7 +6,7 @@ define('APPLICATION_PATH', dirname(__FILE__));
 define('JOB_DIRECTORY', APPLICATION_PATH . '/NetworkHeartbeat/Job/');
 
 $config_data = include 'config.php';
-$Config = new Config();
+$Config = new \NetworkHeartbeat\Config();
 $Config->setWithArray($config_data);
 
 $Job = factory($argv[1]);
