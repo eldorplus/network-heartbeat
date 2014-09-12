@@ -17,7 +17,7 @@ $listen->on('message', function ($msg) {
 	$event = unserialize($msg);
 
 	$config_data = include 'config.php';
-	$Config = new Config();
+	$Config = new \NetworkHeartbeat\Config();
 	$Config->setWithArray($config_data);
 
 	$mailer = NetworkHeartbeat\Mailer\Strategy::getMailer($Config);
