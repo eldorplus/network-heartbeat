@@ -18,7 +18,7 @@ namespace NetworkHeartbeat\Mailer;
 
 class Strategy
 {
-    public static function getMailer(\stdClass $Config)
+    public static function getMailer(\NetworkHeartbeat\Config $Config)
     {
         switch ($Config->mailer->vendor->name){
             case 'Mandrill':
@@ -30,7 +30,7 @@ class Strategy
         return $mailer;
     }
 
-    public static function Mandrill(\stdClass $Config)
+    public static function Mandrill(\NetworkHeartbeat\Config $Config)
     {
         return Vendors\Mandrill\Adapter::factory($Config);
     }
