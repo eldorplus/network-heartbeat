@@ -17,8 +17,8 @@ abstract class Base
 		return $this->_config;
 	}
 
-	public function setConfig(\stdClass $config){
-		$this->_config = $config;
+	public function setConfig(\NetworkHeartbeat\Config $Config){
+		$this->_config = $Config;
 	}
 
 	public function triggerEvent($triggeredEvent, $meta = '')
