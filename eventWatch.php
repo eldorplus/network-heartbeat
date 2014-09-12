@@ -1,16 +1,10 @@
 <?php
 
 require 'vendor/autoload.php';
-
-$config_data = include 'config.php';
-$Config = new Config();
-$Config->setWithArray($config_data);
-
 echo ":: EventWatch - Network Heartbeat";
 
 $server = React\EventLoop\Factory::create();
 $context = new React\ZMQ\Context($server);
-$mailer = NetworkHeartbeat\Mailer\Strategy::getMailer($Config);
 
 echo "\r\nServer created...";
 
@@ -22,6 +16,11 @@ echo "Bound to socket, port 5555.";
 $listen->on('message', function ($msg) {
 	$event = unserialize($msg);
 
+	$config_data = include 'config.php';
+	$Config = new Config();
+	$Config->setWithArray($config_data);
+
+	$mailer = NetworkHeartbeat\Mailer\Strategy::getMailer($Config);
 	$mailer->setBody($event->message);
 	$mailer->setTitle($event->event);
 	$mailer->addRecipient($Config->administrator->email, $Config->administrator->name);
