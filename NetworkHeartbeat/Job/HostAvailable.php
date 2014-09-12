@@ -23,6 +23,8 @@ class HostAvailable extends \NetworkHeartbeat\Job\Base
 							$loss = (int) substr($line, strrpos($line, ',')); 
 						}
 					}
+
+$this->triggerEvent(\NetworkHeartbeat\Event\Event::JOB_EXCEPTION, 'test');
 					
 					if($loss == 100) {
 						$this->triggerEvent(\NetworkHeartbeat\Event\Event::HOST_UNAVAILABLE, $host);
