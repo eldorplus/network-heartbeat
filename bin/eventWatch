@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+chdir(dirname(__FILE__));
 require_once '../vendor/autoload.php';
 echo ":: EventWatch - Network Heartbeat";
 
@@ -18,7 +19,7 @@ $listen->on('message', function ($msg) {
 
 	require_once '../vendor/autoload.php';
 
-	$config_data = include 'config.php';
+	$config_data = include '../config.php';
 	$Config = new \NetworkHeartbeat\Config();
 	$Config->setWithArray($config_data);
 
