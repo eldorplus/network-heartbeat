@@ -1,6 +1,6 @@
-<?php
+#!/usr/bin/env php
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 define('APPLICATION_PATH', dirname(__FILE__));
 define('JOB_DIRECTORY', APPLICATION_PATH . '/NetworkHeartbeat/Job/');

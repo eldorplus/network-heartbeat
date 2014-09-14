@@ -1,5 +1,4 @@
-<?php
-
+#!/usr/bin/env php
 require_once 'vendor/autoload.php';
 echo ":: EventWatch - Network Heartbeat";
 
