@@ -1,11 +1,12 @@
 #!/usr/bin/env php
 <?php
-require_once '../vendor/autoload.php';
-
-define('APPLICATION_PATH', dirname(__FILE__));
+define('APPLICATION_PATH', dirname(dirname(__FILE__)));
 define('JOB_DIRECTORY', APPLICATION_PATH . '/NetworkHeartbeat/Job/');
 
-$config_data = include '../config.php';
+chdir(APPLICATION_PATH);
+require_once 'vendor/autoload.php';
+
+$config_data = include 'config.php';
 $Config = new \NetworkHeartbeat\Config();
 $Config->setWithArray($config_data);
 
