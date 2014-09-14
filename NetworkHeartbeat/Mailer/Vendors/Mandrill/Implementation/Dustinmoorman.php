@@ -8,8 +8,7 @@ class Dustinmoorman implements \NetworkHeartbeat\Mailer\AdapterInterface
 
     public function __construct(\NetworkHeartbeat\Config $Config)
     {
-        include APPLICATION_PATH . '/vendor/dustinmoorman/mandrill/Mandrill.php';
-        $this->_Mandrill = new \Mandrill(
+        $this->_Mandrill = new \Dustinmoorman\Mandrill\Mandrill(
             $Config->mailer->vendor->from->name,
             $Config->mailer->vendor->from->address,
             $Config->mailer->vendor->from->reply,
