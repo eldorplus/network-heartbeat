@@ -31,4 +31,8 @@ class Dustinmoorman implements \NetworkHeartbeat\Mailer\AdapterInterface
         $this->_Mandrill->setHTML($body);
     }
 
+	public function setTitle($title)
+	{
+		$this->_Mandrill->setTitle($title);
+	}
 }
