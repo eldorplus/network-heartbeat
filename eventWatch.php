@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 echo ":: EventWatch - Network Heartbeat";
 
 $server = React\EventLoop\Factory::create();
@@ -15,7 +15,7 @@ echo "Bound to socket, port 5555.";
 
 $listen->on('message', function ($msg) {
 	$event = unserialize($msg);
-
+	require_once 'vendor/autoload.php';
 	$config_data = include 'config.php';
 	$Config = new \NetworkHeartbeat\Config();
 	$Config->setWithArray($config_data);
