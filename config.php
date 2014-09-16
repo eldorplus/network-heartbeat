@@ -51,5 +51,11 @@ return array (
 		'networkAvailable' => array(
 			'wait_time_seconds' => 5,
 		),
+		'WebHostServing' => array(
+			'hosts' => array(
+				'taupe' => 'www.tau.pe',
+				'dustinmoorman.com' => 'www.dustinmoorman.com'
+			),
+		)
 	),
 );
