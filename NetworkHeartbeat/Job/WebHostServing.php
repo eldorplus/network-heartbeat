@@ -2,7 +2,7 @@
 
 namespace NetworkHeartbeat\Job;
 
-class HostAvailable extends \NetworkHeartbeat\Job\Base 
+class WebHostServing extends \NetworkHeartbeat\Job\Base 
 {
 	public function execute()
 	{
