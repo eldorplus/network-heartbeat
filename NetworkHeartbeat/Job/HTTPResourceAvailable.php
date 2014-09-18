@@ -20,7 +20,7 @@ class HTTPResourceAvailable extends \NetworkHeartbeat\Job\Base
 					}
 				}
 			} else {
-				throw new Exception('No hosts set to test in configuration.');
+				throw new Exception('No web hosts set to test in configuration.');
 			}	
 		} catch (Exception $e){
 			$this->triggerEvent(\NetworkHeartbeat\Event::JOB_EXCEPTION, $e->getMessage());
