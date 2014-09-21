@@ -56,6 +56,9 @@ return array (
 		),
 		'networkAvailable' => array(
 			'wait_time_seconds' => 5,
+			'events' => array(
+				'JOB_EXCEPTION' => 'An exception has occurred with NetworkAvailable'
+			)
 		),
 		'HTTPResourceAvailable' => array(
 			'hosts' => array(
