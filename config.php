@@ -54,7 +54,7 @@ return array (
 				'PACKET_LOSS_THRESHOLD' => 'Host registering high packet loss'
 			)
 		),
-		'networkAvailable' => array(
+		'NetworkAvailable' => array(
 			'wait_time_seconds' => 5,
 			'events' => array(
 				'JOB_EXCEPTION' => 'An exception has occurred with NetworkAvailable'
