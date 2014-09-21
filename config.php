@@ -48,7 +48,7 @@ return array (
 				'scotch' => '192.168.1.5'
 			),
 			'events' => array(
-				'JOB_EXCEPTION' => 'An exception has occured with HostAvailable',
+				'JOB_EXCEPTION' => 'An exception has occurred with HostAvailable',
 				'HOST_HIGH_PING' => 'Host registring high ping',
 				'HOST_UNAVAILABLE' => 'Unable to reach host',
 				'PACKET_LOSS_THRESHOLD' => 'Host registering high packet loss'
