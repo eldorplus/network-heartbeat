@@ -45,8 +45,14 @@ return array (
 			'high_ping_threshold_ms' => 300,
 			'acceptable_packet_loss_percent' => 1,
 			'hosts' => array(
-				'test' => 'www.tau.pe'
+				'scotch' => '192.168.1.5'
 			),
+			'events' => array(
+				'JOB_EXCEPTION' => 'An exception has occured with HostAvailable',
+				'HOST_HIGH_PING' => 'Host registring high ping',
+				'HOST_UNAVAILABLE' => 'Unable to reach host',
+				'PACKET_LOSS_THRESHOLD' => 'Host registering high packet loss'
+			)
 		),
 		'networkAvailable' => array(
 			'wait_time_seconds' => 5,
