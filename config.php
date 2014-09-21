@@ -65,6 +65,9 @@ return array (
 				'taupe' => 'www.tau.pe',
 				'dustinmoorman.com' => 'www.dustinmoorman.com'
 			),
+			'events' => array(
+				'HTTP_HOST_UNAVAILABLE' => 'Cannot reach Web Host'
+			)
 		)
 	),
 );
