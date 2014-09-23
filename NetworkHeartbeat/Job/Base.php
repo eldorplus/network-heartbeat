@@ -6,6 +6,7 @@ abstract class Base
 {
 	private $_config;
 	private $_Emitter;
+	private $_events;
 
 	public function __construct()
 	{
@@ -26,5 +27,9 @@ abstract class Base
 		$event = new \NetworkHeartbeat\Event\Event($triggeredEvent, $meta);
 		$this->_Emitter->transmit($event->getPayload());
 	}
-
+	
+	public function registerEvents()
+	{
+		$this->_events = $this->getConfig()->events;
+	}
 }
