@@ -28,7 +28,7 @@ abstract class Base
 		$this->_Emitter->transmit($event->getPayload());
 	}
 	
-	public function registerEvents()
+	protected function registerEvents()
 	{
 		$this->_events = $this->getConfig()->events;
 	}
