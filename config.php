@@ -44,6 +44,10 @@ return [
 			'ping_count' => 3,
 			'high_ping_threshold_ms' => 300,
 			'acceptable_packet_loss_percent' => 1,
+			/**
+			 * Local machines you'd like to check availability,
+			 * hostname / identifier => address.
+			 */
 			'hosts' => [
 				'scotch' => '192.168.1.5'
 			],
