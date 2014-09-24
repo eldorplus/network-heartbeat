@@ -6,18 +6,18 @@
 */
 $mandrill_api_key = include 'mandrill.key.php';
 
-return array (
+return [
 	/**
 	* Administrator details, your name and email.
 	*/
-	'administrator' => array(
+	'administrator' => [
 		'email' => 'dustin.moorman@gmail.com',
 		'name' => 'Dustin Moorman'
-	),
-	'hosts' => array(),
-	'mailer' => array(
+	],
+	'hosts' => [],
+	'mailer' => [
 		'on' => true,
-		'vendor' => array(
+		'vendor' => [
 			'name' => 'Mandrill',
 			'implementation' => 'Dustinmoorman',
 			/**
@@ -25,49 +25,49 @@ return array (
 			* system that will be sending you notification 
 			* emails.
 			*/
-			'from' => array(
+			'from' => [
 				'name' => 'Network Heartbeat',
 				'address' => 'neth@dustinmoorman.com',
 				'reply' => 'dustin.moorman@gmail.com' 
-			),
+			],
 			'apiKey' => $mandrill_api_key
-		)
-	),
+		]
+	],
 	/**
 	* Job configuration. Each job has its own
 	* distinct variable scope. Any keys and values
 	* made here will be available in each job
 	* respectively.
 	*/
-	'job' => array(
-		'HostAvailable' => array(
+	'job' => [
+		'HostAvailable' => [
 			'ping_count' => 3,
 			'high_ping_threshold_ms' => 300,
 			'acceptable_packet_loss_percent' => 1,
-			'hosts' => array(
+			'hosts' => [
 				'scotch' => '192.168.1.5'
-			),
-			'events' => array(
+			],
+			'events' => [
 				'JOB_EXCEPTION' => 'An exception has occurred with HostAvailable',
 				'HOST_HIGH_PING' => 'Host registring high ping',
 				'HOST_UNAVAILABLE' => 'Unable to reach host',
 				'PACKET_LOSS_THRESHOLD' => 'Host registering high packet loss'
-			)
-		),
-		'NetworkAvailable' => array(
+			]
+		],
+		'NetworkAvailable' => [
 			'wait_time_seconds' => 5,
-			'events' => array(
+			'events' => [
 				'JOB_EXCEPTION' => 'An exception has occurred with NetworkAvailable'
-			)
-		),
-		'HTTPResourceAvailable' => array(
-			'hosts' => array(
+			]
+		],
+		'HTTPResourceAvailable' => [
+			'hosts' => [
 				'taupe' => 'www.tau.pe',
 				'dustinmoorman.com' => 'www.dustinmoorman.com'
-			),
-			'events' => array(
+			],
+			'events' => [
 				'HTTP_HOST_UNAVAILABLE' => 'Cannot reach Web Host'
-			)
-		)
-	),
-);
+			]
+		]
+	],
+];
