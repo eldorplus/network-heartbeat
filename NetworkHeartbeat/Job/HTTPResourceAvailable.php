@@ -16,7 +16,7 @@ class HTTPResourceAvailable extends \NetworkHeartbeat\Job\Base
 					echo $host . ' registering ' . $http_status;
 					if($http_status !== '200') {
 						//trigger own event, GH Issue #19 - see what works best.
-						$this->triggerEvent(self::EVENT_HTTP_NOT_200, $host);
+						$this->triggerEvent('HTTP_HOST_UNAVAILABLE', $host);
 					}
 				}
 			} else {
