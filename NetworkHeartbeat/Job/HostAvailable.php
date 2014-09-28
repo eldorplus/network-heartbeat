@@ -26,16 +26,16 @@ class HostAvailable extends \NetworkHeartbeat\Job\Base
 					}
 
 					if($loss == 100) {
-						$this->triggerEvent(\NetworkHeartbeat\Event\Event::HOST_UNAVAILABLE, $host);
+						$this->triggerEvent('HOST_UNAVAILABLE', $host);
 					} else {
 
 						if ($loss > $this->getConfig()->acceptable_packet_loss_percent) {
-							$this->triggerEvent(\NetworkHeartbeat\Event\Event::PACKET_LOSS_THRESHOLD, $host);
+							$this->triggerEvent('PACKET_LOSS_THRESHOLD', $host);
 						}
 					
 						foreach($ms as $msec){
 							if($msec > $this->getConfig()->high_ping_threshold_ms){
-								$this->triggerEvent(\NetworkHeartbeat\Event\Event::HOST_HIGH_PING, $host);
+								$this->triggerEvent('HOST_HIGH_PING', $host);
 							}
 						}
 					}
@@ -44,7 +44,7 @@ class HostAvailable extends \NetworkHeartbeat\Job\Base
 				throw new Exception('No hosts set to test in configuration.');
 			}	
 		} catch (Exception $e){
-			$this->triggerEvent(\NetworkHeartbeat\Event::JOB_EXCEPTION, $e->getMessage());
+			$this->triggerEvent('JOB_EXCEPTION', $e->getMessage());
 			return false;
 		}
 		return true;
