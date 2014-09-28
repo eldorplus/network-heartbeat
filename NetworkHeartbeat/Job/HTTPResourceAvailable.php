@@ -6,6 +6,7 @@ class HTTPResourceAvailable extends \NetworkHeartbeat\Job\Base
 {
 	public function execute()
 	{
+		$this->registerEvents();
 		try {
 			if(sizeof($this->getConfig()->hosts) > 0){
 				foreach ($this->getConfig()->hosts as $host => $url) {	
