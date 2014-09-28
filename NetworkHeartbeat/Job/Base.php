@@ -24,7 +24,7 @@ abstract class Base
 
 	public function triggerEvent($triggeredEvent, $meta = '')
 	{
-		$event = new StdClass();
+		$event = new \StdClass();
 
 		if (array_key_exists($triggeredEvent, $this->_events)) {
 			$event->event = $triggeredEvent;
