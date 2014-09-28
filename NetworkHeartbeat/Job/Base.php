@@ -24,8 +24,17 @@ abstract class Base
 
 	public function triggerEvent($triggeredEvent, $meta = '')
 	{
-		$event = new \NetworkHeartbeat\Event\Event($triggeredEvent, $meta);
-		$this->_Emitter->transmit($event->getPayload());
+		$event = new StdClass();
+
+		if (array_key_exists($triggeredEvent, $this->_events)) {
+			$event->event = $triggeredEvent;
+			$event->message = $this->_config[$triggeredEvent] . $meta;
+			$this->_Emitter->transmit($event);
+		} else {
+			$event->event = 'Unknown Event';
+			$event->message = 'An unknown event has been triggered.';
+			$this->_Emitter->transmit($event);
+		}
 	}
 	
 	protected function registerEvents()
