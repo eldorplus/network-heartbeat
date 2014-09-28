@@ -24,7 +24,7 @@ class HostAvailable extends \NetworkHeartbeat\Job\Base
 							$loss = (int) substr($line, strrpos($line, ',')); 
 						}
 					}
-
+					
 					if($loss == 100) {
 						$this->triggerEvent('HOST_UNAVAILABLE', $host);
 					} else {
