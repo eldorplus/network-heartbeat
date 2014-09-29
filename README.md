@@ -1,4 +1,4 @@
 network-heartbeat
 =================
 
-Set of home network monitoring tools built to be ran from a rasberry pi.
+A framework and set of monitoring jobs to audit network uptime from a network enabled device - such as a Raspberry Pi.
