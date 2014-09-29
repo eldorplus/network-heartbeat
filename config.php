@@ -53,9 +53,9 @@ return [
 			],
 			'events' => [
 				'JOB_EXCEPTION' => 'An exception has occurred with HostAvailable',
-				'HOST_HIGH_PING' => 'Host registring high ping',
-				'HOST_UNAVAILABLE' => 'Unable to reach host',
-				'PACKET_LOSS_THRESHOLD' => 'Host registering high packet loss'
+				'HOST_HIGH_PING' => 'Host registring high ping: ',
+				'HOST_UNAVAILABLE' => 'Unable to reach host: ',
+				'PACKET_LOSS_THRESHOLD' => 'Host registering high packet loss: '
 			]
 		],
 		'NetworkAvailable' => [
