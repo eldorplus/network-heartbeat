@@ -70,7 +70,7 @@ return [
 				'dustinmoorman.com' => 'dustinmoorman.com'
 			],
 			'events' => [
-				'HTTP_HOST_UNAVAILABLE' => 'Cannot reach Web Host'
+				'HTTP_HOST_UNAVAILABLE' => 'Cannot reach Web Host: '
 			]
 		]
 	],
